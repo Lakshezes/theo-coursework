@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils'
 
 export function Navigation() {
   const pathname = usePathname()
-  const { viewMode, contrastMode, toggleViewMode, toggleContrastMode } = useViewMode()
+  const { viewMode, toggleViewMode } = useViewMode()
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -47,45 +47,24 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Mode Toggles */}
-          <div className="flex flex-wrap items-center gap-6 border-t pt-4 lg:border-t-0 lg:pt-0">
-            {/* Visual/Text Mode Toggle */}
-            <div className="flex items-center gap-2">
-              <Label 
-                htmlFor="view-mode-toggle" 
-                className="text-sm font-medium cursor-pointer"
-                aria-label={`Current mode: ${viewMode}. Toggle to switch between visual and text modes.`}
-              >
-                {viewMode === 'visual' ? 'Visual' : 'Text'}
-              </Label>
-              <Switch
-                id="view-mode-toggle"
-                checked={viewMode === 'visual'}
-                onCheckedChange={toggleViewMode}
-                aria-label="Toggle between visual and text display modes"
-              />
-            </div>
-
-            {/* High Contrast Toggle */}
-            <div className="flex items-center gap-2">
-              <Label 
-                htmlFor="contrast-toggle" 
-                className="text-sm font-medium cursor-pointer"
-                aria-label={`Current contrast: ${contrastMode}. Toggle to switch between normal and high contrast.`}
-              >
-                {contrastMode === 'high' ? 'High Contrast' : 'Normal'}
-              </Label>
-              <Switch
-                id="contrast-toggle"
-                checked={contrastMode === 'high'}
-                onCheckedChange={toggleContrastMode}
-                aria-label="Toggle high contrast mode for better accessibility"
-              />
-            </div>
+          {/* Mode Toggle */}
+          <div className="flex items-center gap-2 border-t pt-4 lg:border-t-0 lg:pt-0">
+            <Label 
+              htmlFor="view-mode-toggle" 
+              className="text-sm font-medium cursor-pointer"
+              aria-label={`Current mode: ${viewMode}. Toggle to switch between visual and text modes.`}
+            >
+              {viewMode === 'visual' ? 'Visual' : 'Text'}
+            </Label>
+            <Switch
+              id="view-mode-toggle"
+              checked={viewMode === 'visual'}
+              onCheckedChange={toggleViewMode}
+              aria-label="Toggle between visual and text display modes"
+            />
           </div>
         </div>
       </div>
     </nav>
   )
 }
-
