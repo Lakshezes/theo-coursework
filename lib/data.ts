@@ -19,7 +19,7 @@ export const attractions: Attraction[] = [
     fullDescription: "Journey through 3,000 years of ancient Egyptian civilization. Our collection features authentic mummies, intricate hieroglyphic tablets, jewelry from royal tombs, and everyday objects that tell the story of life along the Nile. Highlights include a beautifully preserved sarcophagus from the 18th Dynasty and a collection of canopic jars used in mummification.",
     location: "Ground Floor, East Wing",
     openingHours: "9:00 AM - 6:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1590579491624-f98f36d4c763?w=800&h=600&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1599656531273-70bbbe4272ff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
     featured: true,
   },
   {
@@ -30,7 +30,7 @@ export const attractions: Attraction[] = [
     fullDescription: "Immerse yourself in the golden age of art. This gallery showcases paintings, sculptures, and sketches from masters of the Renaissance era. Experience the evolution of artistic techniques, from early perspective experiments to the mastery of chiaroscuro. The collection includes works inspired by da Vinci, Michelangelo, and Raphael's styles.",
     location: "Second Floor, Main Gallery",
     openingHours: "9:00 AM - 6:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800&h=600&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1583748969877-76af108e461d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1668",
     featured: true,
   },
   {
@@ -41,7 +41,7 @@ export const attractions: Attraction[] = [
     fullDescription: "Step back in time to when dinosaurs ruled the Earth. Our paleontology section features complete dinosaur skeletons, including a towering T-Rex replica and genuine fossils from the Mesozoic Era. Interactive displays explain continental drift, mass extinction events, and how paleontologists piece together ancient ecosystems from fossil evidence.",
     location: "Ground Floor, West Wing",
     openingHours: "9:00 AM - 6:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1569163139394-de4798aa62b6?w=800&h=600&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=704",
     featured: true,
   },
   {
@@ -63,7 +63,7 @@ export const attractions: Attraction[] = [
     fullDescription: "Enter the age of knights and castles. This collection showcases genuine medieval armor, weaponry, and battle equipment from the 11th to 15th centuries. See how armor evolved from chainmail to full plate, examine swords and crossbows, and learn about medieval warfare tactics. The centerpiece is a complete jousting armor set from 14th century England.",
     location: "Second Floor, East Wing",
     openingHours: "9:00 AM - 6:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1597008641621-cefdcf718025?w=800&h=600&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1560339795-43309a7a8e30?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8TWVkaWV2YWwlMjBBcm1zJTIwJTI2JTIwQXJtb3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=700",
     featured: false,
   },
   {
@@ -74,7 +74,7 @@ export const attractions: Attraction[] = [
     fullDescription: "Discover the diverse artistic heritage of Asia spanning thousands of years. This gallery features Chinese porcelain, Japanese woodblock prints, Buddhist sculptures, and intricate textiles from across the continent. Learn about calligraphy as an art form, the symbolism in Asian art, and the influence of philosophy and religion on creative expression.",
     location: "Third Floor, South Wing",
     openingHours: "9:00 AM - 6:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1580662375615-2f5e2b5a0f4a?w=800&h=600&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1687382130081-ebd36ecd38a9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1728",
     featured: true,
   },
   {
@@ -107,7 +107,7 @@ export const attractions: Attraction[] = [
     fullDescription: "Chart a course through maritime heritage. This exhibition features ship models, navigation instruments, maps, and artifacts recovered from shipwrecks. Learn about the Age of Exploration, the development of naval technology, famous voyages, and the crucial role of maritime trade in shaping civilizations. Interactive displays let visitors try their hand at celestial navigation.",
     location: "Ground Floor, North Wing",
     openingHours: "9:00 AM - 5:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1547499417-ec0ce2dbd06c?w=800&h=600&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1741623675303-2d63cd2769b1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFyaXRpbWUlMjBoaXN0b3J5fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=700",
     featured: false,
   },
   {
@@ -118,7 +118,7 @@ export const attractions: Attraction[] = [
     fullDescription: "Witness the incredible journey of photographic technology and artistry. This gallery showcases early cameras, vintage photographs, and contemporary photo art. Explore how photography has documented history, shaped public perception, and evolved as an artistic medium. The collection includes work from pioneering photographers and modern photojournalists who have captured defining moments.",
     location: "Second Floor, West Wing",
     openingHours: "10:00 AM - 6:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&h=600&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1692153142567-4443bee183d2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
     featured: false,
   },
 ];
