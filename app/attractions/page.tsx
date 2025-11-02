@@ -1,23 +1,21 @@
 "use client"
 
 import { useState, useMemo } from 'react'
-import { AttractionCard } from '@/components/attraction-card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { attractions } from '@/lib/data'
 import { useViewMode } from '@/lib/view-mode-context'
+import { AttractionsSection } from './AttractionsSection'
 
 export default function AttractionsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const { viewMode } = useViewMode()
 
-  // Get unique categories
   const categories = useMemo(() => {
     const cats = Array.from(new Set(attractions.map(a => a.category)))
     return ['all', ...cats]
   }, [])
 
-  // Filter attractions by category
   const filteredAttractions = useMemo(() => {
     if (selectedCategory === 'all') return attractions
     return attractions.filter(a => a.category === selectedCategory)
@@ -25,25 +23,19 @@ export default function AttractionsPage() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      {/* Page Header */}
       <div className="space-y-4 mb-12">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
           Museum Attractions
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl">
           Explore our diverse collection of exhibitions and galleries. 
-          {viewMode === 'visual' 
+          {viewMode === 'visual'
             ? ' Browse through beautiful imagery and detailed descriptions.'
             : ' View concise information in an easy-to-read format.'}
         </p>
       </div>
 
-      {/* Category Filter */}
-      <div 
-        className="mb-8"
-        role="group"
-        aria-label="Filter attractions by category"
-      >
+      <div className="mb-8" role="group" aria-label="Filter attractions by category">
         <div className="flex flex-wrap gap-2">
           {categories.map((category) => (
             <Button
@@ -60,7 +52,6 @@ export default function AttractionsPage() {
         </div>
       </div>
 
-      {/* Results Count */}
       <div className="mb-6 flex items-center justify-between">
         <p className="text-sm text-muted-foreground">
           Showing {filteredAttractions.length} {filteredAttractions.length === 1 ? 'attraction' : 'attractions'}
@@ -71,34 +62,9 @@ export default function AttractionsPage() {
         </Badge>
       </div>
 
-      {/* Attractions Display */}
-      {viewMode === 'visual' ? (
-        <div 
-          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
-          role="list"
-          aria-label="Attractions grid"
-        >
-          {filteredAttractions.map((attraction) => (
-            <div key={attraction.id} role="listitem">
-              <AttractionCard attraction={attraction} />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div 
-          className="space-y-4 max-w-4xl"
-          role="list"
-          aria-label="Attractions list"
-        >
-          {filteredAttractions.map((attraction) => (
-            <div key={attraction.id} role="listitem">
-              <AttractionCard attraction={attraction} />
-            </div>
-          ))}
-        </div>
-      )}
+      {/*Use modal-enabled AttractionsSection */}
+      <AttractionsSection attractions={filteredAttractions} />
 
-      {/* No Results */}
       {filteredAttractions.length === 0 && (
         <div className="text-center py-12">
           <p className="text-lg text-muted-foreground">
@@ -109,4 +75,3 @@ export default function AttractionsPage() {
     </div>
   )
 }
-

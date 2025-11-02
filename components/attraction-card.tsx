@@ -8,15 +8,17 @@ import type { Attraction } from '@/lib/data'
 
 interface AttractionCardProps {
   attraction: Attraction
+  onClick?: () => void
 }
 
-export function AttractionCard({ attraction }: AttractionCardProps) {
+export function AttractionCard({ attraction, onClick }: AttractionCardProps) {
   const { viewMode } = useViewMode()
 
   if (viewMode === 'text') {
     return (
-      <div 
-        className="border-b pb-4 last:border-b-0"
+      <div
+        onClick={onClick} // added
+        className="border-b pb-4 last:border-b-0 cursor-pointer hover:bg-muted/30 transition"
         role="article"
         aria-label={`Attraction: ${attraction.name}`}
       >
@@ -42,8 +44,9 @@ export function AttractionCard({ attraction }: AttractionCardProps) {
   }
 
   return (
-    <Card 
-      className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+    <Card
+      onClick={onClick}
+      className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
       role="article"
       aria-label={`Attraction: ${attraction.name}`}
     >
@@ -76,4 +79,3 @@ export function AttractionCard({ attraction }: AttractionCardProps) {
     </Card>
   )
 }
-
