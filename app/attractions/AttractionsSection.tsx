@@ -11,13 +11,12 @@ interface AttractionsSectionProps {
 }
 
 export function AttractionsSection({ attractions }: AttractionsSectionProps) {
-  const [selectedAttraction, setSelectedAttraction] =
-    useState<Attraction | null>(null);
-
-    const {viewMode} = useViewMode();
+  const [selectedAttraction, setSelectedAttraction] = useState<Attraction | null>(null);
+  const { viewMode } = useViewMode();
 
   return (
     <>
+      {/* Attraction grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {attractions.map((attraction) => (
           <AttractionCard
@@ -25,14 +24,15 @@ export function AttractionsSection({ attractions }: AttractionsSectionProps) {
             attraction={attraction}
             onClick={() => {
               console.log("Clicked:", attraction.name);
-              if(viewMode === "visual"){
+              // always open modal, regardless of viewMode
               setSelectedAttraction(attraction);
-            }}}
+            }}
           />
         ))}
       </div>
 
-      {selectedAttraction && viewMode === "visual" && (
+      {/* Show modal for both visual + text */}
+      {selectedAttraction && (
         <AttractionModal
           attraction={selectedAttraction}
           onClose={() => setSelectedAttraction(null)}
