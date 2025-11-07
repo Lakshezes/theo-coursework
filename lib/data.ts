@@ -118,7 +118,7 @@ export const attractions: Attraction[] = [
     fullDescription:
       "A tribute to indigenous voices and traditions. This gallery presents ceremonial masks, woven textiles, and carvings from First Nations, Aboriginal, and Pacific Islander cultures. Audio recordings share stories from indigenous curators. New exhibit: *Guardians of the Land* (March - September 2026) focuses on ecological stewardship.",
     location: "Ground Floor, South Wing",
-    openingHours: "Daily: 9:30 AM - 6 PM",
+    openingHours: "Daily: 9:30 AM - 7 PM",
     imageUrl:
       "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&h=600&fit=crop",
     featured: false,
